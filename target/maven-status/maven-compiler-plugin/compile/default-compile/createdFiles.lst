@@ -1,0 +1,4 @@
+com\exemplo\seuprojeto\model\Produto.class
+com\exemplo\seuprojeto\service\ProdutoService.class
+com\exemplo\seuprojeto\controller\ProdutoController.class
+com\exemplo\seuprojeto\SeuProjetoApplication.class
