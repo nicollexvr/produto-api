@@ -1,3 +1,4 @@
+
 package com.exemplo.seuprojeto.controller;
 
 import com.exemplo.seuprojeto.model.Produto;
@@ -12,6 +13,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/produtos")
+@CrossOrigin(origins = "http://localhost:8080")
 public class ProdutoController {
 
     @Autowired
@@ -26,7 +28,6 @@ public class ProdutoController {
     // Buscar produto por ID
     @GetMapping("/{id}")
     public ResponseEntity<Produto> getProdutoById(@PathVariable Long id) {
-
         Optional<Produto> produto = produtoService.findById(id);
 
         return produto
@@ -57,7 +58,6 @@ public class ProdutoController {
     // Deletar produto
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteProduto(@PathVariable Long id) {
-
         if (produtoService.deleteById(id)) {
             return ResponseEntity.ok().build();
         }
