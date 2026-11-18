@@ -13,7 +13,10 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/produtos")
-@CrossOrigin(origins = "http://localhost:8080")
+@CrossOrigin(origins = {
+    "http://localhost:8080",
+    "https://produtos-frontend-lhy6.onrender.com"
+})
 public class ProdutoController {
 
     @Autowired
