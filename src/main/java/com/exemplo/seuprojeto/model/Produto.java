@@ -1,11 +1,20 @@
+
 package com.exemplo.seuprojeto.model;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "produtos")
 public class Produto {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String nome;
+
     private double preco;
 
-    // Construtor vazio (necessário para o Spring Boot)
     public Produto() {
     }
 
